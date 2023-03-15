@@ -15,9 +15,9 @@ namespace TwitterBot
             GlobalConfiguration.Configuration.UseSqlServerStorage("<connection-string>");
             using (WebApp.Start("http://localhost:9000"))
             {
-                RecurringJob.AddOrUpdate(() => Tweet("Text for the tweet."), Cron.Daily);
+                RecurringJob.AddOrUpdate(() => Tweet("Text for the tweet"), Cron.Daily);
 
-                Console.WriteLine("Hangfire server started. Press any key to exit.");
+                Console.WriteLine("Hangfire server started. Press any key to exit");
                 Console.ReadKey();
             }
         }
